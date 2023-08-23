@@ -1,1 +1,0 @@
-ฟังก์ชันของ Bank Natchapol

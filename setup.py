@@ -1,5 +1,6 @@
 from setuptools import setup, find_packages
- 
+from pathlib import Path
+
 classifiers = [
   'Development Status :: 5 - Production/Stable',
   'Intended Audience :: Education',
@@ -8,11 +9,15 @@ classifiers = [
   'Programming Language :: Python :: 3'
 ]
  
+this_directory = Path(__file__).parent
+long_description = (this_directory / "README.md").read_text(encoding='utf8') + '\n\n' + (this_directory / "CHANGELOG.md").read_text(encoding='utf8')
+
 setup(
   name='banknatchapolfunctions',
-  version='0.0.3',
+  version='0.1.3',
   description='ฟังก์ชันของ Bank Natchapol',
-  long_description=open('README.txt', encoding='utf8').read() + '\n\n' + open('CHANGELOG.txt', encoding='utf8').read(),
+  long_description=long_description,
+  long_description_content_type='text/markdown',
   url='',  
   author='Bank Natchapol',
   author_email='natchapol.pat@gmail.com',
